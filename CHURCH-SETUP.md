@@ -65,9 +65,26 @@ Breeze's help center has more detail under "Sharing a Breeze Form."
 
 - **"What to Expect" text** on Plan a Visit (worship, "no dress code," "kids welcome"). It was written as a friendly starting point, so please adjust it to fit.
 - **Phone number** 661.236.9420 (taken from the current Contact page).
-- **Podcast list** shows the 10 most recent episodes as of October 2026. New episodes need to be added to `EPISODES` in `js/app.js` until the list is connected to the podcast feed.
+- **First-Time Questions** on Plan a Visit: answers highlighted in yellow (`[Church to provide]`) need the church's real answers. Replace each highlighted note with plain text.
+- **Podcast list** shows the 10 most recent episodes as of October 2026. A new episode needs to be added in two places: `EPISODES` in `js/app.js`, and the episode list in `media.html` (so search engines can read it).
+- **Statement of faith** lives in two places: the text in `beliefs.html`, and `BELIEFS` in `js/app.js`. Keep them the same.
 - **Family photo** on the About page is the one from the church's current About page.
 
 ## 5. Publishing
 
-The site is plain HTML, CSS and JavaScript, with no build step. Upload the whole folder (all 8 `.html` pages plus `css/`, `js/` and `assets/`) to any web host, or replace the current site's files. Free hosts like Netlify, Vercel, Cloudflare Pages and GitHub Pages all work.
+The site is plain HTML, CSS and JavaScript, with no build step. Upload the whole folder (all 8 `.html` pages plus `sitemap.xml`, `css/`, `js/` and `assets/`) to any web host, or replace the current site's files. Free hosts like Netlify, Vercel, Cloudflare Pages and GitHub Pages all work.
+
+**After changing `css/styles.css` or `js/app.js`:** bump the version number in every page's links (for example `styles.css?v=2` to `?v=3`) so visitors' browsers load the new file instead of an old saved copy.
+
+## 6. Launch checklist (moving from the preview to electriccitybaptist.com)
+
+1. **Swap the address:** in every `.html` file and `sitemap.xml`, find `https://atlantic-ministries-trust.github.io/electriccitybaptist/` and replace it with `https://electriccitybaptist.com/`. This updates share previews, canonical links and the schema in one step.
+2. **Let search engines in:** delete the `<meta name="robots" content="noindex, nofollow">` line from every page, and replace `robots.txt` with:
+   ```
+   User-agent: *
+   Allow: /
+   Sitemap: https://electriccitybaptist.com/sitemap.xml
+   ```
+3. **Redirect old addresses** (so Google listings and old links don't break): `/about` → `/about.html`, `/beliefs` → `/beliefs.html`, `/give` → `/give.html`, `/location` → `/visit.html`, `/location-3` → `/contact.html`, `/quarterly` → `/media.html#quarterly`.
+4. **Add tracking:** Google Analytics 4 on every page, and verify Google Search Console and Bing Webmaster Tools; submit `sitemap.xml` in both.
+5. **Google Business Profile:** set the website link to `https://electriccitybaptist.com/visit.html`.

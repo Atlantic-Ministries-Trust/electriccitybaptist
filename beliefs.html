@@ -4,20 +4,108 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>What We Believe | Electric City Baptist Church</title>
-  <meta name="description" content="The statement of faith of Electric City Baptist Church: the Bible, God, Jesus, sin, and the church, with Scripture references.">
+  <meta name="description" content="The statement of faith of Electric City Baptist Church in Schenectady, NY: the Bible, God, Jesus, sin and the church, with Scripture.">
   <meta name="theme-color" content="#8a3324">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" href="assets/ecbc-logo.png">
   <link rel="apple-touch-icon" href="assets/ecbc-logo.png">
   <meta property="og:title" content="What We Believe | Electric City Baptist Church">
-  <meta property="og:description" content="The statement of faith of Electric City Baptist Church: the Bible, God, Jesus, sin, and the church, with Scripture references.">
-  <meta property="og:image" content="assets/ecbc-logo.png">
+  <meta property="og:description" content="The statement of faith of Electric City Baptist Church in Schenectady, NY: the Bible, God, Jesus, sin and the church, with Scripture.">
+  <meta property="og:image" content="https://atlantic-ministries-trust.github.io/electriccitybaptist/assets/ecbc-logo.png">
+  <meta property="og:url" content="https://atlantic-ministries-trust.github.io/electriccitybaptist/beliefs.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Electric City Baptist Church">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://atlantic-ministries-trust.github.io/electriccitybaptist/beliefs.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2">
   <script>
     try { const t = localStorage.getItem("ecbc-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Church",
+      "@id": "https://atlantic-ministries-trust.github.io/electriccitybaptist/#church",
+      "name": "Electric City Baptist Church",
+      "alternateName": "ECBC",
+      "description": "An independent Baptist church in Schenectady, NY. Sundays at 10:30 a.m. Everything for Christ, by Christ.",
+      "url": "https://atlantic-ministries-trust.github.io/electriccitybaptist/",
+      "logo": "https://atlantic-ministries-trust.github.io/electriccitybaptist/assets/ecbc-logo.png",
+      "image": "https://atlantic-ministries-trust.github.io/electriccitybaptist/assets/stafford-family.jpg",
+      "telephone": "+1-661-236-9420",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2350 Hamburg St",
+        "addressLocality": "Schenectady",
+        "addressRegion": "NY",
+        "postalCode": "12303",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.781,
+        "longitude": -73.9327
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=2350+Hamburg+St,+Schenectady,+NY+12303",
+      "event": {
+        "@type": "Event",
+        "name": "Sunday Worship",
+        "eventSchedule": {
+          "@type": "Schedule",
+          "byDay": "https://schema.org/Sunday",
+          "repeatFrequency": "P1W",
+          "startTime": "10:30",
+          "scheduleTimezone": "America/New_York"
+        },
+        "location": {
+          "@type": "Place",
+          "name": "Electric City Baptist Church",
+          "address": "2350 Hamburg St, Schenectady, NY 12303"
+        }
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Anthony Stafford",
+        "jobTitle": "Pastor"
+      },
+      "sameAs": [
+        "https://www.facebook.com/ElectricCityBaptist/",
+        "https://thejesusplace.substack.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://atlantic-ministries-trust.github.io/electriccitybaptist/#website",
+      "url": "https://atlantic-ministries-trust.github.io/electriccitybaptist/",
+      "name": "Electric City Baptist Church",
+      "publisher": {
+        "@id": "https://atlantic-ministries-trust.github.io/electriccitybaptist/#church"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://atlantic-ministries-trust.github.io/electriccitybaptist/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What We Believe",
+          "item": "https://atlantic-ministries-trust.github.io/electriccitybaptist/beliefs.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -115,10 +203,61 @@
       <p class="eyebrow">What We Believe</p>
       <h2>Grounded in the Word</h2>
       <p class="lead">We believe the Bible is the inerrant, infallible, preserved Word of God. Everything we teach flows from it. Tap a belief to read more and see the Scriptures behind it.</p>
-      <div class="belief-chips" id="beliefChips"></div>
-      <div class="photo"><img src="assets/beliefs.jpg" alt="" loading="lazy"></div>
+      <div class="belief-chips" id="beliefChips"><button class="chip on" data-i="0">The Bible</button><button class="chip " data-i="1">God</button><button class="chip " data-i="2">Jesus</button><button class="chip " data-i="3">Sin</button><button class="chip " data-i="4">The Church</button></div>
+      <div class="photo"><img src="assets/beliefs.jpg" alt="City view with church steeples" loading="lazy"></div>
     </div>
-    <div class="accordion reveal" data-delay="1" id="beliefAccordion"></div>
+    <div class="accordion reveal" data-delay="1" id="beliefAccordion">
+      <div class="acc open" id="belief-0">
+        <button class="acc-head" aria-expanded="true" aria-controls="belief-body-0">
+          <span class="n">01</span><h3>The Bible</h3><span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" id="belief-body-0" role="region"><div><div class="inner">
+          <p style="margin-top:0">We believe the Bible to be the revealed Word of God, fully and verbally inspired of God. We believe the Scriptures to be the inerrant, infallible Word of God, as found within the 66 books from Genesis to Revelation. We believe that God not only inspired every word, but that He has preserved them through the ages.</p>
+          <div class="refs"><span>Psalm 12:6–7</span><span>II Timothy 3:15–17</span><span>I Peter 1:23–25</span><span>II Peter 1:19–21</span></div>
+          <button class="copy-refs" data-i="0"><svg><use href="#i-copy"/></svg> Copy references</button>
+        </div></div></div>
+      </div>
+      <div class="acc " id="belief-1">
+        <button class="acc-head" aria-expanded="false" aria-controls="belief-body-1">
+          <span class="n">02</span><h3>God</h3><span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" id="belief-body-1" role="region"><div><div class="inner">
+          <p style="margin-top:0">We believe in one God, who is eternal, self-existent, infinite, and immutable. We believe He has one nature, one essence, and one substance; yet manifests Himself to man in three Persons: the Father, the Son, and the Holy Spirit.</p>
+          <div class="refs"><span>Deuteronomy 6:4</span><span>I Timothy 1:17</span><span>James 1:17</span><span>I John 4:4</span></div>
+          <button class="copy-refs" data-i="1"><svg><use href="#i-copy"/></svg> Copy references</button>
+        </div></div></div>
+      </div>
+      <div class="acc " id="belief-2">
+        <button class="acc-head" aria-expanded="false" aria-controls="belief-body-2">
+          <span class="n">03</span><h3>Jesus</h3><span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" id="belief-body-2" role="region"><div><div class="inner">
+          <p style="margin-top:0">We believe Jesus Christ to be the one and only Saviour of mankind, eternally God and possessing all the attributes of Deity. We believe the Lord Jesus Christ was virgin-born, that He was God incarnate, and that the purposes of the incarnation were to reveal God, to redeem men, and to rule over God's kingdom. He lived a perfect, sinless life, at the end of which He was offered for all mankind as a substitutionary sacrifice for man's sin, a just payment to God for the forgiveness of sin. It was activated by His death through the shedding of His blood on the cross and was accepted by God upon His resurrection. He ascended into Heaven to be seated at the right hand of the Father, and is now waiting for the time of receiving His church at the rapture, which is followed by His return seven years later to earth to rule and reign as King for 1,000 years.</p>
+          <div class="refs"><span>Psalm 2:7–9</span><span>Isaiah 7:14; 9:6; 43:11</span><span>Micah 5:2</span><span>Matthew 1:25</span><span>Luke 1:26–35</span><span>John 1:1, 3, 14, 18, 29</span><span>Romans 3:19–25</span><span>Romans 5:6–15</span><span>Philippians 2:5–11</span><span>I Thessalonians 4:13–18</span><span>I Timothy 2:5; 3:16</span><span>Titus 2:10–15</span><span>Hebrews 7:26; 9:24–28</span><span>I Peter 1:19; 2:2</span><span>I John 1:3</span><span>Revelation 20:1–6</span></div>
+          <button class="copy-refs" data-i="2"><svg><use href="#i-copy"/></svg> Copy references</button>
+        </div></div></div>
+      </div>
+      <div class="acc " id="belief-3">
+        <button class="acc-head" aria-expanded="false" aria-controls="belief-body-3">
+          <span class="n">04</span><h3>Sin</h3><span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" id="belief-body-3" role="region"><div><div class="inner">
+          <p style="margin-top:0">We believe all men were born with an inherited sin nature received from our common ancestor, Adam. Because of this nature, man is a sinner by choice, and he is totally incapable of reforming himself or ceasing from his sin by his own power. The only hope of deliverance for man is a total change of mind concerning his sinful condition and inability to change it, and a turning to Jesus Christ as the only Saviour. Only through the substitutionary sacrifice of Christ on the cross can a man be delivered from his sin. All those who reject Jesus Christ as their Saviour are already condemned to an eternity in the lake of fire.</p>
+          <div class="refs"><span>Genesis 5:1–5</span><span>Acts 4:19</span><span>Acts 16:31</span><span>Romans 3:10–23</span><span>Romans 5:6–12</span><span>Romans 6:23</span><span>Romans 10:9–10</span><span>Ephesians 2:8–9</span><span>Titus 3:5–6</span><span>Revelation 20:11–14</span></div>
+          <button class="copy-refs" data-i="3"><svg><use href="#i-copy"/></svg> Copy references</button>
+        </div></div></div>
+      </div>
+      <div class="acc " id="belief-4">
+        <button class="acc-head" aria-expanded="false" aria-controls="belief-body-4">
+          <span class="n">05</span><h3>The Church</h3><span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" id="belief-body-4" role="region"><div><div class="inner">
+          <p style="margin-top:0">We believe that the church began with the calling out of the twelve apostles by Jesus Christ and was empowered on the day of Pentecost. The local church is composed of members who have been saved and baptized according to the command of Christ, and have voluntarily united together for the purposes of worship, fellowship, service, and observance of the ordinances of baptism and communion. We believe all true believers will be taken up at the rapture, just prior to the tribulation.</p>
+          <div class="refs"><span>Matthew 16:16–18</span><span>Acts 1:15</span><span>Acts 2:41–43</span><span>Acts 11:15</span><span>Acts 20:28</span><span>I Corinthians 15:51–58</span><span>Ephesians 1:12–14</span><span>Ephesians 5:25–30</span><span>I Thessalonians 4:13–18</span><span>I Timothy 3:4–15</span></div>
+          <button class="copy-refs" data-i="4"><svg><use href="#i-copy"/></svg> Copy references</button>
+        </div></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -212,8 +351,14 @@
   </form>
 </dialog>
 
+<nav class="mobile-cta" aria-label="Quick actions">
+  <a href="visit.html"><svg><use href="#i-door"/></svg>Plan a Visit</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=2350+Hamburg+St,+Schenectady,+NY+12303" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Directions</a>
+  <a href="tel:+16612369420"><svg><use href="#i-phone"/></svg>Call</a>
+</nav>
+
 <div class="toast" id="toast" role="status"></div>
 
-<script src="js/app.js"></script>
+<script src="js/app.js?v=2"></script>
 </body>
 </html>

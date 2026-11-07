@@ -195,15 +195,15 @@ h3 { font-size: 1.45rem; }
 .pulse { width: 10px; height: 10px; border-radius: 50%; background: var(--spark); position: relative; }
 .pulse::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--spark); animation: pulse 2s infinite; }
 @keyframes pulse { to { transform: scale(3); opacity: 0; } }
-.hero h1 {
+.hero .hero-title {
   font-size: clamp(3rem, 9vw, 6.6rem);
   text-transform: uppercase;
   line-height: .95;
   letter-spacing: -.005em;
   margin-bottom: 24px;
 }
-.hero h1 .bolt { color: var(--spark); display: inline-block; }
-.hero h1 em { font-style: normal; color: transparent; -webkit-text-stroke: 2px #fff; }
+.hero .hero-title .bolt { color: var(--spark); display: inline-block; }
+.hero .hero-title em { font-style: normal; color: transparent; -webkit-text-stroke: 2px #fff; }
 .hero p.lead { color: rgba(255,255,255,.82); font-size: 1.2rem; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 
@@ -671,7 +671,7 @@ dialog .breeze-frame { height: min(640px, 70vh); }
 }
 .page-hero-bg { position: absolute; inset: 0; z-index: -2; background: center/cover no-repeat; filter: grayscale(.35) brightness(.55); transform: scale(1.04); }
 .page-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 15% 40%, rgba(138,51,36,.6), transparent 60%), linear-gradient(180deg, rgba(18,13,11,.4), rgba(18,13,11,.85)); }
-.page-hero h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); text-transform: uppercase; line-height: .95; margin-bottom: 18px; }
+.page-hero h1:not(.eyebrow), .page-hero .page-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.8rem, 7vw, 5.4rem); text-transform: uppercase; line-height: .95; margin-bottom: 18px; }
 .page-hero .eyebrow { color: var(--spark); }
 .page-hero .lead { color: rgba(255,255,255,.85); }
 .page-hero .reveal { opacity: 1; transform: none; animation: heroIn .9s cubic-bezier(.2,.7,.2,1) both; }
@@ -758,3 +758,44 @@ dialog .breeze-frame { height: min(640px, 70vh); }
   .class-list li { grid-template-columns: 1fr; gap: 2px; }
   .family-photo::before { inset: 10px -10px auto 10px; }
 }
+
+/* Topic H1s that sit above the display slogans */
+.hero-kicker {
+  font-family: var(--font-display); font-weight: 500; text-transform: uppercase;
+  letter-spacing: .2em; font-size: .85rem; line-height: 1.4; color: var(--spark); margin: 0 0 14px;
+}
+.hero .hero-title { font-family: var(--font-display); font-weight: 600; margin-top: 0; }
+.page-hero .page-title { margin-top: 0; }
+h1.eyebrow { line-height: 1.4; }
+
+/* Mobile quick-action bar */
+.mobile-cta { display: none; }
+@media (max-width: 680px) {
+  .mobile-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
+  }
+  .mobile-cta a {
+    display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 9px 4px 10px; min-height: 56px;
+    color: var(--ink); text-decoration: none; font-size: .75rem; font-weight: 600; letter-spacing: .02em;
+  }
+  .mobile-cta a:first-child { color: var(--rust); }
+  .mobile-cta svg { width: 20px; height: 20px; }
+  body { padding-bottom: calc(60px + env(safe-area-inset-bottom)); }
+  .mini-player { bottom: calc(70px + env(safe-area-inset-bottom)); }
+}
+
+/* First-time questions */
+.faq { background: var(--paper); }
+.faq-inner { max-width: 860px; }
+.faq-list { display: grid; gap: 10px; }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 0 22px; }
+.faq details[open] { box-shadow: var(--shadow); }
+.faq summary { cursor: pointer; padding: 18px 0; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--rust); font-size: 1.4rem; line-height: 1; }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { margin: 0 0 18px; color: var(--ink-2); }
+.todo { background: #fff3cd; color: #6b4e00; border-radius: 6px; padding: 1px 6px; font-size: .9em; }
